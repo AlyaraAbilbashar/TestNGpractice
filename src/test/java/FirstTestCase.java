@@ -14,7 +14,7 @@ public class FirstTestCase {
     @BeforeSuite
     public void setup() throws InterruptedException {
         driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        driver.manage().window().maximize()
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://demoqa.com/alerts");
 
