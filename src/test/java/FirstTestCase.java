@@ -14,7 +14,7 @@ public class FirstTestCase {
     @BeforeSuite
     public void setup() throws InterruptedException {
         driver = new ChromeDriver();
-        driver.manage().window().maximize()
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://demoqa.com/alerts");
 
@@ -35,7 +35,7 @@ public class FirstTestCase {
      */
     @Test(priority = 0)
     public void click_me() throws InterruptedException {
-        WebElement click_btn = driver.findElement(By.xpath("//*[@id=\"alertButton\"]"));
+        WebElement click_btn = driver.findElement(By.xpath("//*[@id=\"alert\"]"));
         click_btn.click();
         System.out.println(driver.switchTo().alert().getText());
         driver.switchTo().alert().accept();
