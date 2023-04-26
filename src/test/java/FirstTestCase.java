@@ -36,7 +36,7 @@ public class FirstTestCase {
     @Test(priority = 0)
     public void click_me() throws InterruptedException {
         WebElement click_btn = driver.findElement(By.xpath("//*[@id=\"alertButton\"]"));
-        //click_btn.click();
+        click_btn.click();
         System.out.println(driver.switchTo().alert().getText());
         driver.switchTo().alert().accept();
         boolean hasAlert = ExpectedConditions.alertIsPresent().apply(driver) !=null;
